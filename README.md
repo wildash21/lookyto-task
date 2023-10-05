@@ -1,4 +1,4 @@
-# JuiceApp
+# Lookyto Test Task
 
 ## How to use
 
@@ -13,7 +13,7 @@ npm run dev
 ```
 In dev mode, the application will launch from this link:
 ```
-http://localhost:3003
+https://localhost:3003
 ```
 
 Build:
@@ -22,4 +22,3 @@ npm run build
 ```
 
 Builded files wlll appear in folder `./dist`
-"# lookyto-task" 
