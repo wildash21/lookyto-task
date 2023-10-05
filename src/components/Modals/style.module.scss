@@ -1,0 +1,64 @@
+.modal {
+    background-color: #0000007f;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: show 200ms ease;
+
+    &__window {
+        background-color: #3f248a;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 320px;
+        height: 160px;
+        padding: 20px;
+        position: relative;
+
+        input {
+            width: 100%;
+            margin: 10px 0;
+            font-size: inherit;
+            font-family: inherit;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            height: 32px;
+            padding: 10px;
+        }
+
+        button {
+            all: unset;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: transparent;
+            transition: background-color 200ms ease;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ffffff1f;
+            }
+
+            &:active {
+                background-color: #ffffff3f;
+            }
+        }
+    }
+}
+
+@keyframes show {
+    0%,
+    100% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.1;
+    }
+}

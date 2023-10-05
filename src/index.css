@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+:root {
+    --inset-top: 0;
+    --inset-right: 0;
+    --inset-bottom: 0;
+    --inset-left: 0;
+}
+
+@supports (margin-top: env(safe-area-inset-top)) {
+    :root {
+        --inset-top: env(safe-area-inset-top, 0);
+        --inset-right: env(safe-area-inset-right, 0);
+        --inset-bottom: env(safe-area-inset-bottom, 0);
+        --inset-left: env(safe-area-inset-left, 0);
+    }
+}

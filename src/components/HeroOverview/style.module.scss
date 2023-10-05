@@ -1,0 +1,54 @@
+.heroName {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+
+    &__btn {
+        background-color: #3f248a;
+        width: 165px;
+        height: 20px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: 1px solid black;
+        position: relative;
+        font-size: 18px;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &:active {
+            scale: 0.95;
+            opacity: 0.8;
+        }
+
+        &::before {
+            content: '';
+            background-color: #ffffff1f;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: calc(100% - 10px);
+            height: 50%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.heroLottie {
+    width: 384px;
+    height: 384px;
+
+    &.striked {
+        filter: hue-rotate(300deg) blur(10px);
+        transform: scale(1.2, 1);
+    }
+}
