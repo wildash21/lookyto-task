@@ -35,16 +35,16 @@ export default function Characteristics() {
             <SkillRawRow name='energy'>{energy}</SkillRawRow>
 
             <CharacteristicsCategoryTitle>{lang.skills}</CharacteristicsCategoryTitle>
-            <SkillRow skill='attack' showLevel bindBy='power' />
-            <SkillRow skill='stealth' showLevel bindBy='agility' />
-            <SkillRow skill='archery' showLevel bindBy='agility' />
-            <SkillRow skill='learning' showLevel bindBy='intelligence' />
-            <SkillRow skill='survivability' showLevel bindBy='intelligence' />
-            <SkillRow skill='medicine' showLevel bindBy='intelligence' />
-            <SkillRow skill='intimidation' showLevel bindBy='charisma' />
-            <SkillRow skill='insight' showLevel bindBy='charisma' />
-            <SkillRow skill='appearance' showLevel bindBy='charisma' />
-            <SkillRow skill='manipulation' showLevel bindBy='charisma' />
+            <SkillRow skill='attack' showDetailedLevel bindBy='power' />
+            <SkillRow skill='stealth' showDetailedLevel bindBy='agility' />
+            <SkillRow skill='archery' showDetailedLevel bindBy='agility' />
+            <SkillRow skill='learning' showDetailedLevel bindBy='intelligence' />
+            <SkillRow skill='survivability' showDetailedLevel bindBy='intelligence' />
+            <SkillRow skill='medicine' showDetailedLevel bindBy='intelligence' />
+            <SkillRow skill='intimidation' showDetailedLevel bindBy='charisma' />
+            <SkillRow skill='insight' showDetailedLevel bindBy='charisma' />
+            <SkillRow skill='appearance' showDetailedLevel bindBy='charisma' />
+            <SkillRow skill='manipulation' showDetailedLevel bindBy='charisma' />
         </div>
     )
 }

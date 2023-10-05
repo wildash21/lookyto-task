@@ -16,11 +16,11 @@ import styles from './style.module.scss'
 
 const SkillRow = <Key extends keyof PickByType<Hero, number>>({
     skill,
-    showLevel,
+    showDetailedLevel,
     bindBy,
 }: {
     skill: Key
-    showLevel?: boolean
+    showDetailedLevel?: boolean
     bindBy?: Key
 }) => {
     const [value, setValue] = useHeroProperty(skill)
@@ -50,7 +50,7 @@ const SkillRow = <Key extends keyof PickByType<Hero, number>>({
                     -
                 </div>
 
-                {showLevel ? (
+                {showDetailedLevel ? (
                     <Skill skill={value} />
                 ) : (
                     <div className={styles.characteristics__row__right__level}>{value}</div>
