@@ -23,6 +23,7 @@ export default function HeroOverview() {
     const dispatch = useAppDispatch()
 
     const inputRef = useRef<HTMLInputElement>(null)
+    const timerRef = useRef<NodeJS.Timeout>()
 
     const heroData = useAppSelector((state) => state.data.currentHero)
 
@@ -33,7 +34,14 @@ export default function HeroOverview() {
     function strike() {
         setTakenDamage(takenDamage + 1)
         setStriked(true)
-        setTimeout(() => setStriked(false), 200)
+        if (timerRef.current) {
+            clearTimeout(timerRef.current)
+            timerRef.current = undefined
+        }
+        timerRef.current = setTimeout(() => {
+            timerRef.current = undefined
+            setStriked(false)
+        }, 200)
     }
 
     function exportHero() {
